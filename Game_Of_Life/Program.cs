@@ -24,13 +24,14 @@ namespace Game_Of_Life
                 if (set.cellBlock == iter.stepAray) break; 
                 set.cellBlock = iter.stepAray;
                 draw.drawCur(set.cellBlock, n);
-                Thread.Sleep(100); // Time of buffering beatween rewrites
+                Thread.Sleep(1000); // Time of buffering beatween rewrites
             }
             Console.WriteLine("beigasigues");
 
         }
     }
 
+    // "S" from Solid
     class setup
     {  
         //Maine matrix of data containing all cells 
@@ -52,6 +53,7 @@ namespace Game_Of_Life
         }
     }
 
+    // "S" from Solid
     class iteration
     {
         //extra array for next generations calculations
@@ -65,6 +67,7 @@ namespace Game_Of_Life
             {
                 for (int j = 0; j < n; j++)
                 {
+                    // Best practice not more then 3 levels ina method/class
                     int sum = 0;
                     if (i == 0)
                     {
@@ -101,7 +104,7 @@ namespace Game_Of_Life
         }
     }
 
-
+    // "S" from Solid
     class drawer
     {
         //Printer resets the pointer in console and rewrites matrix
